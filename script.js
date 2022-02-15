@@ -75,7 +75,7 @@ const data = [
   },
   {
     image: './img/morning.jpg',
-    text: 'Buenos diaz',
+    text: 'Buenos dias',
     text2:"Good Morning"
   },
   {
