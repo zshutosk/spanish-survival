@@ -98,10 +98,11 @@ data.forEach(createBox);
 const message = new SpeechSynthesisUtterance();
 speechSynthesis.getVoices()
 message.voiceURI = 'native';
-message.volume = 0.8; // 0 to 1
-message.rate = 0.9; // 0.1 to 10
+message.volume = 1; // 0 to 1
+message.rate = 0.8; // 0.1 to 10
 message.pitch = 1; //0 to 2
 message.lang = 'es-ES';
+
 
 
 // Create speech boxes

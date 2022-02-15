@@ -39,6 +39,11 @@ h3 {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
+.header p {
+  text-align:center;
+  color:#fff;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
