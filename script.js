@@ -93,15 +93,17 @@ const data = [
 
 data.forEach(createBox);
 
-
+//speechSynthesis.getVoices()
 // Init speech synth
 const message = new SpeechSynthesisUtterance();
-speechSynthesis.getVoices()
+const lang = 'es-ES';
 message.voiceURI = 'native';
 message.volume = 1; // 0 to 1
 message.rate = 0.8; // 0.1 to 10
 message.pitch = 1; //0 to 2
-message.lang = 'es-ES';
+message.lang = 'es-ES', 'Paulina';
+message.voice = voicesList.find((voice) => voice.lang === 'es-ES', 'Paulina');
+
 
 
 
