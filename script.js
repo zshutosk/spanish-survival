@@ -96,16 +96,25 @@ data.forEach(createBox);
 //speechSynthesis.getVoices()
 // Init speech synth
 const message = new SpeechSynthesisUtterance();
-const lang = 'es-ES';
+var voices = [];
+
 message.voiceURI = 'native';
 message.volume = 1; // 0 to 1
 message.rate = 0.8; // 0.1 to 10
 message.pitch = 1; //0 to 2
 message.lang = 'es-ES', 'Paulina';
-message.voice = voicesList.find((voice) => voice.lang === 'es-ES', 'Paulina');
 
 
+function resetLanguage() {
+  voices = speechSynthesis.getVoices();
+  console.log("Loaded Voices");
+  message.voice = voices.find((voice) => voice.lang === 'es-ES', 'Paulina');
+}
+resetLanguage(); // Call the function on the devices
 
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = resetLanguage;
+}
 
 // Create speech boxes
 function createBox(item) {
